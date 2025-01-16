@@ -16,13 +16,8 @@ namespace ReqnrollOnlineBank.Specs.StepDefinitions
         {
         }
 
-        [Then("the loan application is approved")]
-        public void ThenTheLoanApplicationIsApproved()
-        {
-        }
-
-        [Then("the loan application is denied")]
-        public void ThenTheLoanApplicationIsDenied()
+        [Then(@"^the loan application is (approved|denied)$")]
+        public void ThenTheLoanApplicationIsApproved(string expectedResult)
         {
         }
 
