@@ -21,12 +21,14 @@ namespace ReqnrollOnlineBank.Specs.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("LoanApplication")]
+    [NUnit.Framework.CategoryAttribute("loanapplication")]
     public partial class LoanApplicationFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "loanapplication"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoanApplication", "  As a loan application evaluator\r\n  I want to only approve loan requests that me" +
                 "et our agreed upon loan amount rules\r\n  So the risk associated with supplying lo" +
@@ -93,7 +95,7 @@ namespace ReqnrollOnlineBank.Specs.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("amount", amount);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Loan amounts under 1000 are always approved", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -103,13 +105,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 8
+#line 9
  await testRunner.GivenAsync("John is an active ParaBank customer", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 9
+#line 10
  await testRunner.WhenAsync(string.Format("they apply for a {0} dollar loan", amount), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
  await testRunner.ThenAsync("the loan application is approved", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -126,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("amount", amount);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Loan amounts greater than or equal to 100000 are always denied", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -136,13 +138,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 17
+#line 18
  await testRunner.GivenAsync("John is an active ParaBank customer", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 18
+#line 19
  await testRunner.WhenAsync(string.Format("they apply for a {0} dollar loan", amount), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 20
  await testRunner.ThenAsync("the loan application is denied", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -165,7 +167,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("income", income);
             argumentsOfScenario.Add("result", result);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("For loan amounts between 1000 and 100000 the result depends on income", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -175,16 +177,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 26
+#line 27
     await testRunner.GivenAsync("John is an active ParaBank customer", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 27
+#line 28
  await testRunner.WhenAsync(string.Format("they apply for a {0} dollar loan", amount), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 28
+#line 29
  await testRunner.AndAsync(string.Format("their monthly income is {0}", income), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 30
  await testRunner.ThenAsync(string.Format("the loan application is {0}", result), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }

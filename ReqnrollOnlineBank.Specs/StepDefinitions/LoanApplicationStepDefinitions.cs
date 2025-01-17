@@ -1,11 +1,14 @@
-using System;
-using Reqnroll;
-
 namespace ReqnrollOnlineBank.Specs.StepDefinitions
 {
     [Binding]
+    [Scope(Tag = "loanapplication")]
     public class LoanApplicationStepDefinitions
     {
+        [BeforeScenario(tags: "loanapplication")]
+        public void InitializeParaBankApplication()
+        {
+        }
+
         [Given("John is an active ParaBank customer")]
         public void GivenJohnIsAnActiveParaBankCustomer()
         {
@@ -23,6 +26,11 @@ namespace ReqnrollOnlineBank.Specs.StepDefinitions
 
         [When("their monthly income is {int}")]
         public void WhenTheirMonthlyIncomeIs(int p0)
+        {
+        }
+
+        [AfterScenario(tags: "loanapplication")]
+        public void DoSomeNecessaryCleanup()
         {
         }
     }
