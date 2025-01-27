@@ -1,4 +1,4 @@
-﻿@loanapplication
+﻿@userinterface
 Feature: LoanApplication
 
   As a loan application evaluator
