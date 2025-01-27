@@ -4,8 +4,8 @@ namespace ReqnrollOnlineBank.Specs.Pages
 {
     public class LoginPage : BasePage
     {
-        // private readonly string pageUrl = "https://parabank.parasoft.com";
-        private readonly string pageUrl = "http://localhost:8080/parabank";
+        private readonly string pageUrl = "https://parabank.parasoft.com";
+        // private readonly string pageUrl = "http://localhost:8080/parabank";
 
         private readonly By textfieldUsername = By.Name("username");
         private readonly By textfieldPassword = By.Name("password");

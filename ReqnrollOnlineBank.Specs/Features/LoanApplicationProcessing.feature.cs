@@ -28,9 +28,9 @@ namespace ReqnrollOnlineBank.Specs.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoanApplicationProcessing", "  As a loan application back office employee\r\n  I want to be able to process inco" +
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoanApplicationProcessing", ("  As a loan application back office employee\r\n  I want to be able to process inco" +
                 "ming loan requests\r\n  So we can communicate the results to our customer in a tim" +
-                "ely manner", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+                "ely manner"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "LoanApplicationProcessing.feature"
 #line hidden
