@@ -45,7 +45,7 @@ namespace ReqnrollOnlineBank.Specs.StepDefinitions
         [When(@"they apply for a {int} dollar loan")]
         public void WhenTheyApplyForADollarLoan(int loanAmount)
         {
-            this.response = (LoanApplicationResponse)Given()
+            this.response = Given()
                 .Spec(this.requestSpecification!)
                 .QueryParam("customerId", this.customerId)
                 .QueryParam("amount", loanAmount)
@@ -56,7 +56,7 @@ namespace ReqnrollOnlineBank.Specs.StepDefinitions
                 .Then()
                 .StatusCode(200)
                 .And()
-                .DeserializeTo(typeof(LoanApplicationResponse));
+                .DeserializeTo<LoanApplicationResponse>();
         }
 
         [Then(@"^the loan application is (approved|denied)$")]
