@@ -20,14 +20,14 @@ namespace ReqnrollOnlineBank.Specs.Features
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("LoanApplication")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
-    [global::NUnit.Framework.CategoryAttribute("api")]
+    [global::NUnit.Framework.CategoryAttribute("userinterface")]
     public partial class LoanApplicationFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = new string[] {
-                "api"};
+                "userinterface"};
         
         private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features", "LoanApplication", "  As a loan application evaluator\r\n  I want to only approve loan requests that me" +
                 "et our agreed upon loan amount rules\r\n  So the risk associated with supplying lo" +
